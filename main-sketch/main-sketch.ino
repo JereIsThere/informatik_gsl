@@ -1,3 +1,13 @@
+/*
+ * Sensoren:
+ * Lufttemperatur
+ * Bodenfeuchtigkeit
+ * Lichtsensor
+ * 
+ * Bauteile:
+ * Licht
+ */
+
 void setup() {
   // put your setup code here, to run once:
 

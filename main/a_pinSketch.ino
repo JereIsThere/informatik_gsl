@@ -1,7 +1,5 @@
 void setPinModes() {
-  //prepare pins
-  pinMode(DHT_pin, INPUT);
-  
+  //prepare pins  
   pinMode(temp_c, OUTPUT);
 
   pinMode(air_humid_c, OUTPUT);

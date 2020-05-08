@@ -8,8 +8,6 @@
   Licht = light
 */
 
-int DHT_pin = 2; //pin for the DHT-sensor, so for humidity and temperature
-
 byte temp_c = 0;
 
 byte air_humid_c = A2;
@@ -21,11 +19,13 @@ byte light_c = A4;
 
 byte fans[] = {3, 4};
 
+float idealHumidity = 50.00;
+
 void setup() {
-  //Serial.begin(115200);
+  Serial.begin(115200);
+  setupDHT();
 }
 
 void loop() {
-  //byte groundVal = temp_r;
-  //Serial.print(groundVal);
+  regulateHumidity();
 }

@@ -2,6 +2,6 @@
     "board": "arduino:avr:mega",
     "configuration": "cpu=atmega2560",
     "port": "COM13",
-    "programmer": "AVRISP mkII",
+    "programmer": "AVR ISP",
     "sketch": "main.ino"
 }

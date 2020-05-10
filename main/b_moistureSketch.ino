@@ -11,6 +11,8 @@ int currentHumidity;
 
 DHT dht(DHTPIN, DHTTYPE); //defines variable "dht" as a shortcut
 
+//TODO implement relay for usb air moisturizer 
+
 void setupDHT()
 {
   pinMode(DHT_pin, INPUT);

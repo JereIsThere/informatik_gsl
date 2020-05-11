@@ -1,0 +1,18 @@
+{
+    "configurations": [{
+        "name": "Win32",
+        "includePath": [
+            "C:\\Program Files (x86)\\Arduino\\tools\\**",
+            "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\**",
+            "C:\\Users\\fuuma\\OneDrive\\Dokumente\\Arduino\\libraries\\**"
+        ],
+        "forcedInclude": [
+            "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\cores\\arduino\\Arduino.h"
+        ],
+        "intelliSenseMode": "gcc-x64",
+        "compilerPath": "\"C:/Program Files (x86)/Arduino/hardware/tools/avr/bin/avr-g++.exe\" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -flto -w -x c++ -E -CC -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR",
+        "cStandard": "c11",
+        "cppStandard": "c++17"
+    }],
+    "version": 4
+}

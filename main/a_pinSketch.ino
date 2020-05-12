@@ -1,15 +1,24 @@
-void setPinModes() {
-  //prepare pins  
-  pinMode(temp_c, OUTPUT);
+//declaring power pins
+int powerPinMin = 22;
+int powerPinMax = 40;
+//declaring gnd pins
+int gndPinMin = 41;
+int gndPinMax = 53;
 
-  pinMode(air_humid_c, OUTPUT);
+void setPinModes()
+{
+  //cycling through power pins
+  for(int i = powerPinMin; i<= powerPinMax; i++){
+    //setting pinModes for powerPins
+    pinMode(i, OUTPUT);
+    //setting the 5V output for the power pins
+    digitalWrite(i, HIGH);
+  }
 
-  pinMode(gnd_humid_r, INPUT);
-  pinMode(gnd_humid_c, INPUT);
-  
-  pinMode(light_c, OUTPUT);
-
-  for(int i =0;i<sizeof(fans);i++){
-    pinMode(fans[i], OUTPUT);
+  for(int i = gndPinMin; i<= gndPinMax; i++){
+    //setting pinModes for gndPins
+    pinMode(i, OUTPUT);
+    //setting gnd output for gndPins
+    digitalWrite(i, LOW);
   }
 }

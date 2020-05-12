@@ -1,5 +1,5 @@
 int DHT_pin = 2; //pin for the DHT-sensor, so for humidity and temperature
-int higherPin = 3;
+int humidControlPin = 3;
 int lowerPin = 4;
 int currentHumidity;
 
@@ -11,33 +11,31 @@ int currentHumidity;
 
 DHT dht(DHTPIN, DHTTYPE); //defines variable "dht" as a shortcut
 
-//TODO implement relay for usb air moisturizer 
 
 void setupDHT()
 {
+  //sets pin mode for the pin where the dht is connected
   pinMode(DHT_pin, INPUT);
+  //initializes the dht-sensor
   dht.begin();
 }
 
 void updateHumudity()
 {
-
+  //reads the current humidity with the DHT-sensor and stores it in a local value
   float humidity = dht.readHumidity();
-
+  //updates the glbal value with the one read
   currentHumidity = humidity;
 }
 
 void regulateHumidity(float targetHumidity, float currentHumidity)
 {
-
+  //waits for the sensor to finish (it's slow)
   delay(2000);
-
+  //updates the current humidity reading
   updateHumudity();
 
-  Serial.print("humidity (");
-  Serial.print(currentHumidity);
-  Serial.print(") needs to be ");
-
+  //raises or lowers the humidity according to the target and the current humidity
   if (targetHumidity > currentHumidity)
   {
     raiseHumidity();
@@ -46,22 +44,16 @@ void regulateHumidity(float targetHumidity, float currentHumidity)
   {
     lowerHumidity();
   }
-
-  Serial.print(" (");
-  Serial.print(targetHumidity);
-  Serial.println(")");
 }
 
 void raiseHumidity()
 {
-  Serial.print("higher");
-  digitalWrite(higherPin, HIGH);
-  digitalWrite(lowerPin, LOW);
+  //powers USB-Air moisturizer
+  digitalWrite(humidControlPin, HIGH);
 }
 
 void lowerHumidity()
 {
-  Serial.print("lower");
-  digitalWrite(lowerPin, HIGH);
-  digitalWrite(higherPin, LOW);
+  //cuts power to USB-Air moisturizer
+  digitalWrite(humidControlPin, LOW);
 }

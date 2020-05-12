@@ -1,74 +1,42 @@
-/*
-  Sensoren (readings): *_r
-  Kontrollelemente (control): *_c
-
-  Lufttemperatur = temp
-  Luftfeuchtigkeit = air_humid
-  Bodenfeuchtigkeit = gnd_humid
-  Licht = light
-*/
-
-byte temp_c = 0;
-
-byte air_humid_c = A2;
-
-byte gnd_humid_r = A3;
-byte gnd_humid_c = 2;
-
-byte light_c = A4;
-
-byte fans[] = {3, 4};
-
+//sets first ideal values
 float idealHumidity = 50.00;
 
 void setup()
 {
+  //initializes serial communication
   Serial.begin(115200);
+  //sets power and gnd-pins
+  setPinModes();
+  //starts setup for DHT-Sensor
   setupDHT();
+  //starts setup for light
   setupLight();
 }
 
 void loop()
 {
   //regulateHumidity();
-  delay(3000);
-
-  pinMode(13, INPUT);
-  pinMode(12, INPUT);
-
-  bool thirteen = digitalRead(13);
-  bool twelve = digitalRead(12);
-
-  Serial.print(thirteen);
-  Serial.print(" = 13, 12 = ");
-  Serial.println(twelve);
-
-  if (digitalRead(13))
-  {
-    Serial.println("toggleLight");
-    toggleLight();
-  }
-  else if (digitalRead(12))
-  {
-    Serial.println("debugging light");
-    setLightIntensity(0.5);
-  }
 }
 
 void emulateButton(int pin)
 {
+  //presses the button
   digitalWrite(pin, HIGH);
-
+  //waits for 200 millis
   delay(200);
 
+  //releases button
   digitalWrite(pin, LOW);
 }
 
 void emulateButtonInterval(int pin, double time)
 {
+  //presses a button
   emulateButton(pin);
 
+  //waits for secified time
   delay(time);
 
+  //presses button again
   emulateButton(pin);
 }

@@ -1,5 +1,8 @@
 //sets first ideal values
 float idealHumidity = 50.00;
+float humidityTolerance = 5.00;
+float idealTemperature = 30.00;
+float temperatureTolerance = 5.00;
 
 void setup()
 {
@@ -11,11 +14,26 @@ void setup()
   setupDHT();
   //starts setup for light
   setupLight();
+  //starts startup fot temperature
+  setupTemp();
+  }
+
+void debug()
+{
+  pinMode(13, INPUT);
+  //Serial.print(random());
+  if (!digitalRead(13))
+  {
+    regulateTemp();
+  }else{
+    lowerTemp();
+  }
 }
 
 void loop()
 {
   //regulateHumidity();
+  debug();
 }
 
 void emulateButton(int pin)

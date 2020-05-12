@@ -9,7 +9,7 @@ int currentHumidity;
 
 #define DHTTYPE DHT11 // DHT sensor type is DHT11
 
-DHT dht(DHTPIN, DHTTYPE); //defines variable "dht" as a shortcut
+DHT dht (DHTPIN, DHTTYPE); //defines variable "dht" as a shortcut
 
 
 void setupDHT()

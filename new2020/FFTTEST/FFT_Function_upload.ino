@@ -16,7 +16,7 @@ float f_peaks[5]; // top 5 frequencies peaks in descending order
 byte inputPin = A7;
 
 const int sampleSize = 64;
-int data[sampleSize];
+int data[sampleSize], collectingData[sampleSize];
 
 int measureCounter = 0;
 long lastMeasureTime = 0;
@@ -38,15 +38,19 @@ void measure()
   //   data[i] = analogRead(inputPin) - 512;
   // }
   if (micros() - lastMeasureTime >= measureDelay && measureCounter < sampleSize) {
-    data[measureCounter] = analogRead(inputPin) - 512;
+    collectingData[measureCounter] = analogRead(inputPin) - 512;
     measureCounter++;
     lastMeasureTime = micros();
   }
 }
 
 void forceMeasure() {
-  data[measureCounter] = analogRead(inputPin) - 512;
+  collectingData[measureCounter] = analogRead(inputPin) - 512;
   measureCounter++;
+}
+
+void copy(int* src, int* dst, int len) {
+    memcpy(dst, src, sizeof(src[0])*len);
 }
 
 void loop()
@@ -60,6 +64,8 @@ void loop()
   // float freq = sampleSize / (deltaT / 1000.0);
 
   // long fftStart = millis();
+  copy(collectingData, data, sampleSize);
+
   measureCounter = 0;
   float temp = sampleSize / fftDuration * 1000.0 * 1000.0;
   FFT(data, sampleSize, temp);
@@ -105,13 +111,13 @@ Documentation:https://www.instructables.com/member/abhilash_patel/instructables/
 */
 
   // o will be the index of a power of two (from the data array)
-  unsigned int data[13] = {1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048};
+  unsigned int t_data[13] = {1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048};
   int a, c1, f, o, x;
   a = N;
 
   for (int i = 0; i < 12; i++) //calculating the levels
   {
-    if (data[i] <= a)
+    if (t_data[i] <= a)
     {
       o = i;
     }
@@ -120,15 +126,15 @@ Documentation:https://www.instructables.com/member/abhilash_patel/instructables/
 
   // Actual start of the algorithm
 
-  int in_ps[data[o]] = {};    //input for sequencing
-  float out_r[data[o]] = {};  //real part of transform
-  float out_im[data[o]] = {}; //imaginory part of transform
+  int in_ps[t_data[o]] = {};    //input for sequencing
+  float out_r[t_data[o]] = {};  //real part of transform
+  float out_im[t_data[o]] = {}; //imaginory part of transform
 
   x = 0;
   for (int b = 0; b < o; b++) // bit reversal
   {
-    c1 = data[b];
-    f = data[o] / (c1 + c1);
+    c1 = t_data[b];
+    f = t_data[o] / (c1 + c1);
     for (int j = 0; j < c1; j++)
     {
       x = x + 1;
@@ -137,7 +143,7 @@ Documentation:https://www.instructables.com/member/abhilash_patel/instructables/
     }
   }
 
-  for (int i = 0; i < data[o]; i++) // update input array as per bit reverse order
+  for (int i = 0; i < t_data[o]; i++) // update input array as per bit reverse order
   {
     if (in_ps[i] < a)
     {
@@ -155,9 +161,9 @@ Documentation:https://www.instructables.com/member/abhilash_patel/instructables/
 
   for (int i = 0; i < o; i++) //fft
   {
-    i10 = data[i];               // overall values of sine/cosine  :
-    i11 = data[o] / data[i + 1]; // loop with similar sine cosine:
-    e = 360 / data[i + 1];
+    i10 = t_data[i];               // overall values of sine/cosine  :
+    i11 = t_data[o] / t_data[i + 1]; // loop with similar sine cosine:
+    e = 360 / t_data[i + 1];
     e = 0 - e;
     n1 = 0;
 
@@ -190,7 +196,7 @@ Documentation:https://www.instructables.com/member/abhilash_patel/instructables/
   }
 
   /*
-for(int i=0;i<data[o];i++)
+for(int i=0;i<t_data[o];i++)
 {
 Serial.print(out_r[i]);
 Serial.print("\t");                                     // un comment to print RAW o/p    
@@ -199,7 +205,7 @@ Serial.print(out_im[i]); Serial.println("i");
 */
 
   //---> here onward out_r contains amplitude and our_in conntains frequency (Hz)
-  for (int i = 0; i < data[o - 1]; i++) // getting amplitude from compex number
+  for (int i = 0; i < t_data[o - 1]; i++) // getting amplitude from compex number
   {
     measure();
     out_r[i] = sqrt(out_r[i] * out_r[i] + out_im[i] * out_im[i]); // to  increase the speed delete sqrt
@@ -213,7 +219,7 @@ Serial.print(out_im[i]); Serial.println("i");
   }
 
   x = 0; // peak detection
-  for (int i = 1; i < data[o - 1] - 1; i++)
+  for (int i = 1; i < t_data[o - 1] - 1; i++)
   {
     if (out_r[i] > out_r[i - 1] && out_r[i] > out_r[i + 1])
     {

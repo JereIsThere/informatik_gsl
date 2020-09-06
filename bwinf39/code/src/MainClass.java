@@ -14,6 +14,8 @@ import java.util.regex.Pattern;
 
 public class MainClass {
 
+    //------------------------------------------------vars------------------------------------------------------------//
+
     private File mainFile;
 
     private JeresHashMap words = new JeresHashMap();
@@ -24,7 +26,7 @@ public class MainClass {
 
     private JeresHashMap sortedWords = new JeresHashMap();
 
-    //----------------------------------------------------------------------------------------------------------------//
+    //----------------------------------------------main--------------------------------------------------------------//
 
     public static void main(String[] args) {
 
@@ -44,7 +46,7 @@ public class MainClass {
         mainClass.cleanUpGaps();
     }
 
-    //----------------------------------------------------------------------------------------------------------------//
+    //-------------------------------------------non--main------------------------------------------------------------//
 
     private void cleanUpGaps() {
         int sizeOfGaps = gaps.keySet().size();
@@ -131,7 +133,7 @@ public class MainClass {
                         wordsFromLetters.get(length).remove(word);
                         gapsToDelete.put(gapKey, gap);
                     } else {
-                        sortedWords.add(gap);
+                        sortedWords.put(gapKey, gap);
                     }
                 }
 

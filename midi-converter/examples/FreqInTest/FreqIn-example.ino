@@ -4,33 +4,33 @@ byte inputPin = A1;
 
 boolean inputState = false;
 boolean lastInputState = false;
-long count = 0L;
-int cycles = 0;
-long previousCounts = 0;
-unsigned long previousCountMillis = millis();
+double count = 0.00;
 const long countMillis = 100L;
-double median = 0;
+unsigned long previousCountMillis = millis();
 
-
+//Bass is roughly 500/100
 double highTreshold = 30;
 double lowTreshold = 3;
 
+long previousCounts = 0;
+int cycles = 0;
 int measurementCycles = 0;
+double median = 0;
 
 void setInputState() {
-  // int reading = analogRead(inputPin);
-  // if(reading >= highTreshold){
-  //   inputState = true;
-  // }if(reading < lowTreshold){
-  //   inputState = false;
-  // }
-
-  boolean reading = digitalRead(inputPin);
-  if (reading) {
+  int reading = analogRead(inputPin);
+  if(reading >= highTreshold){
     inputState = true;
-  } else {
+  }if(reading < lowTreshold){
     inputState = false;
   }
+
+  // boolean reading = digitalRead(inputPin);
+  // if (reading) {
+  //   inputState = true;
+  // } else {
+  //   inputState = false;
+  // }
 
   // Serial.print("Reading: ");
   // Serial.println(reading);
@@ -41,7 +41,7 @@ void setInputState() {
 void setup() {
   pinMode(inputPin, INPUT);
 
-  Serial.begin(115200);
+  Serial.begin(250000);
 }
 
 void loop() {
@@ -77,7 +77,7 @@ void loop() {
     //Serial.println(measurementCycles);
 
     // reset to zero for the next half second's sample
-    count = 0L;
+    count = 0.00;
     cycles++;
     measurementCycles = 0;
   }

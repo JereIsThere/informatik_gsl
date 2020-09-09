@@ -1,5 +1,3 @@
-import src.JeresHashMap;
-
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.BufferedReader;

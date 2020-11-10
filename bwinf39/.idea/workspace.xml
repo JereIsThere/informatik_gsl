@@ -21,26 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c0edbaf6-112d-4949-aa58-f94cf2db3c91" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/WordSort.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/.idea/artifacts/WordSort.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/.idea/libraries/miglayout_4_0_swing.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/desktop_icons/WordSort_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/desktop_icons/WordSort_16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/desktop_icons/WordSort_32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/desktop_icons/WordSort_512x512.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/backups/backup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/backups/backup.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/backups/identicalTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/backups/identicalTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/backups/raetsel0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/backups/raetsel0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/backups/raetsel1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/backups/raetsel1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/backups/raetsel2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/backups/raetsel2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/backups/raetsel3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/backups/raetsel3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/backups/raetsel4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/backups/raetsel4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/code/code.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/out/production/code/JeresHashMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/code/out/production/code/JeresHashMap.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/out/production/code/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/code/out/production/code/MainClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/JeresHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/JeresHashMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/MainClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1599553310152</updated>
       <workItem from="1604958623441" duration="217000" />
+      <workItem from="1605041253493" duration="175000" />
     </task>
     <servers />
   </component>

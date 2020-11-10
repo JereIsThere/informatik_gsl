@@ -29,7 +29,7 @@ public class MainClass {
 	private Pattern criteriaForWord = Pattern.compile("[\\wüöäÜÄÖ]+");
 	
 	// a backup file if the FileChooser is closed and the mainFile is null
-	private String pathToBackupFile = "backups/backup.txt";
+	private String pathToBackupFile = "res/backups/backup.txt";
 	
 	//list of solved gaps that need to be deleted
 	private List<Integer> gapsToDelete = new ArrayList<>();
@@ -104,8 +104,8 @@ public class MainClass {
 				
 				outputTextArea.setText(mainClass.outputText.toString());
 				
-				frame.pack();
 				frame.setLocationRelativeTo(null);
+				frame.pack();
 			}
 		});
 	}

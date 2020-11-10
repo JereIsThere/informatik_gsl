@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="WordSort">
+  <artifact type="jar" build-on-make="true" name="WordSort">
     <output-path>$PROJECT_DIR$/../</output-path>
     <root id="archive" name="WordSort.jar">
       <element id="module-output" name="code" />

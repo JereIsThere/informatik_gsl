@@ -20,9 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0edbaf6-112d-4949-aa58-f94cf2db3c91" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/code/backups/identicalTest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WordSort.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/.idea/artifacts/WordSort.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/.idea/libraries/miglayout_4_0_swing.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/desktop_icons/WordSort_128x128.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/desktop_icons/WordSort_16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/desktop_icons/WordSort_32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/desktop_icons/WordSort_512x512.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/src/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/backups/backup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/backups/backup.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/backups/identicalTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/backups/identicalTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/backups/raetsel0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/backups/raetsel0.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/backups/raetsel1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/backups/raetsel1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/backups/raetsel2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/backups/raetsel2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/backups/raetsel3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/backups/raetsel3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/backups/raetsel4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/backups/raetsel4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/code/code.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/out/production/code/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/code/out/production/code/MainClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/src/JeresHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/JeresHashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/src/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/MainClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +58,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
   </component>
   <component name="RunManager">
@@ -64,8 +84,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599553310152</updated>
+      <workItem from="1604958623441" duration="217000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -88,22 +112,22 @@
       <screen x="0" y="0" width="1563" height="1012" />
     </state>
     <state x="562" y="261" key="FileChooserDialogImpl/0.0.1563.1012@0.0.1563.1012" timestamp="1600181417879" />
-    <state width="1520" height="272" key="GridCell.Tab.0.bottom" timestamp="1600197045833">
+    <state width="1520" height="272" key="GridCell.Tab.0.bottom" timestamp="1600237953208">
       <screen x="0" y="0" width="1563" height="1012" />
     </state>
-    <state width="1520" height="272" key="GridCell.Tab.0.bottom/0.0.1563.1012@0.0.1563.1012" timestamp="1600197045833" />
-    <state width="1520" height="272" key="GridCell.Tab.0.center" timestamp="1600197045833">
+    <state width="1520" height="272" key="GridCell.Tab.0.bottom/0.0.1563.1012@0.0.1563.1012" timestamp="1600237953208" />
+    <state width="1520" height="272" key="GridCell.Tab.0.center" timestamp="1600237953208">
       <screen x="0" y="0" width="1563" height="1012" />
     </state>
-    <state width="1520" height="272" key="GridCell.Tab.0.center/0.0.1563.1012@0.0.1563.1012" timestamp="1600197045833" />
-    <state width="1520" height="272" key="GridCell.Tab.0.left" timestamp="1600197045833">
+    <state width="1520" height="272" key="GridCell.Tab.0.center/0.0.1563.1012@0.0.1563.1012" timestamp="1600237953208" />
+    <state width="1520" height="272" key="GridCell.Tab.0.left" timestamp="1600237953208">
       <screen x="0" y="0" width="1563" height="1012" />
     </state>
-    <state width="1520" height="272" key="GridCell.Tab.0.left/0.0.1563.1012@0.0.1563.1012" timestamp="1600197045833" />
-    <state width="1520" height="272" key="GridCell.Tab.0.right" timestamp="1600197045833">
+    <state width="1520" height="272" key="GridCell.Tab.0.left/0.0.1563.1012@0.0.1563.1012" timestamp="1600237953208" />
+    <state width="1520" height="272" key="GridCell.Tab.0.right" timestamp="1600237953208">
       <screen x="0" y="0" width="1563" height="1012" />
     </state>
-    <state width="1520" height="272" key="GridCell.Tab.0.right/0.0.1563.1012@0.0.1563.1012" timestamp="1600197045833" />
+    <state width="1520" height="272" key="GridCell.Tab.0.right/0.0.1563.1012@0.0.1563.1012" timestamp="1600237953208" />
     <state x="423" y="110" key="SettingsEditor" timestamp="1600181710646">
       <screen x="0" y="0" width="1563" height="1012" />
     </state>

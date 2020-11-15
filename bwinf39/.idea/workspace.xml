@@ -20,37 +20,97 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0edbaf6-112d-4949-aa58-f94cf2db3c91" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/WordSort.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/code/code.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/miglayout_4_0_swing.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/SampleCreationClass.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WordSort.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bwinf39.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bwinf39.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/out/production/code/JeresHashMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/code/out/production/code/JeresHashMap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/out/production/code/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/code/out/production/code/MainClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/res/backups/backup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/backups/backup.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/res/backups/identicalTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/backups/identicalTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/res/backups/raetsel0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/backups/raetsel0.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/res/backups/raetsel1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/backups/raetsel1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/res/backups/raetsel2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/backups/raetsel2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/res/backups/raetsel3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/backups/raetsel3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/res/backups/raetsel4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/backups/raetsel4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/res/desktop_icons/WordSort_128x128.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/desktop_icons/WordSort_128x128.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/res/desktop_icons/WordSort_16x16.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/desktop_icons/WordSort_16x16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/res/desktop_icons/WordSort_32x32.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/desktop_icons/WordSort_32x32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/res/desktop_icons/WordSort_512x512.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/desktop_icons/WordSort_512x512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/res/samples/raetsel0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/samples/raetsel0.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/res/samples/raetsel1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/samples/raetsel1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/res/samples/raetsel2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/samples/raetsel2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/res/samples/raetsel3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/samples/raetsel3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/res/samples/raetsel4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/samples/raetsel4.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1hDkyVrC9KRraeSqAAtKcegrHIN" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/miglayout-4.0-swing.jar" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fuuma\OneDrive\Desktop\informatik_gsl\bwinf39\code\de.jeremias_groehl.wordsort" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fuuma\OneDrive\Desktop\informatik_gsl\bwinf39" />
+      <recent name="C:\Users\fuuma\OneDrive\Desktop\informatik_gsl\bwinf39\code\de.jeremias_groehl.wordsort" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainClass" />
       <module name="bwinf39" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -71,6 +131,8 @@
       <updated>1599553310152</updated>
       <workItem from="1604958623441" duration="217000" />
       <workItem from="1605041253493" duration="175000" />
+      <workItem from="1605290203675" duration="7982000" />
+      <workItem from="1605453866429" duration="3966000" />
     </task>
     <servers />
   </component>
@@ -94,37 +156,52 @@
       <screen x="0" y="0" width="1563" height="1012" />
     </state>
     <state x="587" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1563.1012@0.0.1563.1012" timestamp="1600186655303" />
-    <state x="562" y="261" key="FileChooserDialogImpl" timestamp="1600181417879">
-      <screen x="0" y="0" width="1563" height="1012" />
+    <state x="690" y="299" key="FileChooserDialogImpl" timestamp="1605294175787">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="562" y="261" key="FileChooserDialogImpl/0.0.1563.1012@0.0.1563.1012" timestamp="1600181417879" />
-    <state width="1520" height="272" key="GridCell.Tab.0.bottom" timestamp="1600237953208">
-      <screen x="0" y="0" width="1563" height="1012" />
+    <state x="690" y="299" key="FileChooserDialogImpl/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605294175787" />
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom" timestamp="1605460261157">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state width="1520" height="272" key="GridCell.Tab.0.bottom/0.0.1563.1012@0.0.1563.1012" timestamp="1600237953208" />
-    <state width="1520" height="272" key="GridCell.Tab.0.center" timestamp="1600237953208">
-      <screen x="0" y="0" width="1563" height="1012" />
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605460261157" />
+    <state width="1877" height="321" key="GridCell.Tab.0.center" timestamp="1605460261157">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state width="1520" height="272" key="GridCell.Tab.0.center/0.0.1563.1012@0.0.1563.1012" timestamp="1600237953208" />
-    <state width="1520" height="272" key="GridCell.Tab.0.left" timestamp="1600237953208">
-      <screen x="0" y="0" width="1563" height="1012" />
+    <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605460261157" />
+    <state width="1877" height="321" key="GridCell.Tab.0.left" timestamp="1605460261156">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state width="1520" height="272" key="GridCell.Tab.0.left/0.0.1563.1012@0.0.1563.1012" timestamp="1600237953208" />
-    <state width="1520" height="272" key="GridCell.Tab.0.right" timestamp="1600237953208">
-      <screen x="0" y="0" width="1563" height="1012" />
+    <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605460261156" />
+    <state width="1877" height="321" key="GridCell.Tab.0.right" timestamp="1605460261157">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state width="1520" height="272" key="GridCell.Tab.0.right/0.0.1563.1012@0.0.1563.1012" timestamp="1600237953208" />
-    <state x="423" y="110" key="SettingsEditor" timestamp="1600181710646">
-      <screen x="0" y="0" width="1563" height="1012" />
+    <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605460261157" />
+    <state x="692" y="282" key="RollbackChangesDialog" timestamp="1605293909350">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="692" y="282" key="RollbackChangesDialog/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605293909350" />
+    <state x="520" y="126" key="SettingsEditor" timestamp="1605294180615">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="423" y="110" key="SettingsEditor/0.0.1563.1012@0.0.1563.1012" timestamp="1600181710646" />
+    <state x="520" y="126" key="SettingsEditor/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605294180615" />
     <state x="512" y="267" key="extract.method.dialog" timestamp="1600186690727">
       <screen x="0" y="0" width="1563" height="1012" />
     </state>
     <state x="512" y="267" key="extract.method.dialog/0.0.1563.1012@0.0.1563.1012" timestamp="1600186690727" />
-    <state x="444" y="218" width="672" height="678" key="search.everywhere.popup" timestamp="1600196985936">
-      <screen x="0" y="0" width="1563" height="1012" />
+    <state x="551" y="240" key="new project wizard" timestamp="1605460432350">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="551" y="240" key="new project wizard/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605460432350" />
+    <state x="545" y="250" width="826" height="778" key="search.everywhere.popup" timestamp="1605456201397">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="444" y="218" width="672" height="678" key="search.everywhere.popup/0.0.1563.1012@0.0.1563.1012" timestamp="1600196985936" />
+    <state x="545" y="250" width="826" height="778" key="search.everywhere.popup/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605456201397" />
   </component>
 </project>

@@ -37,7 +37,8 @@ public class MainClass {
 	private StringBuilder sourceText = new StringBuilder();
 	private StringBuilder outputText = new StringBuilder();
 	
-	
+	private int sortWordsRecourseCount = 0;
+	private int sortWordsRecourseCountMax = 10000;
 	//----------------------------------------------main--------------------------------------------------------------//
 	
 	public static void main(String[] args) {
@@ -188,8 +189,6 @@ public class MainClass {
 		return reader;
 	}
 	
-	//-----------------------------------------------------done-------------------------------------------------------//
-	
 	private void sortWords() {
 		gapsToDelete = new ArrayList<>();
 		
@@ -202,14 +201,13 @@ public class MainClass {
 			int length = gap.length();
 			HashMap<Integer, String> gapLetters = detectLetters(gap);
 			
-			//creates list of possible words that fit the length and the position of the given letters
+			//creates list of possible words that fit the length of the gap
 			List<String> possibleWords = wordsFromLetters.get(length);
 			
 			//if there are no letters in the gap:
 			if (gapLetters.keySet().size() == 0) {
 				
-				// and the options for a possible word are just one,
-				// add the first option to the list of sorted words
+				// and the options for a possible word are just one, add the first option to the list of sorted words
 				if (possibleWords.size() == 1) {
 					String word = possibleWords.get(0);
 					wordFound(word, gapKey);
@@ -278,8 +276,8 @@ public class MainClass {
 							} else {
 								areIdentical = true;
 							}
-							
 						}
+						//breaks as soon as it finds two different words
 						if (! areIdentical)
 							break;
 					}
@@ -305,7 +303,8 @@ public class MainClass {
 		//as long as there are gaps left to solve, this method will recursively start,
 		//until all gaps are solved
 		int sizeOfGaps = gaps.keySet().size();
-		while (sizeOfGaps > 0) {
+		while (sizeOfGaps > 0 && sortWordsRecourseCount < sortWordsRecourseCountMax) {
+			sortWordsRecourseCount++;
 			
 			sortWords();
 			
@@ -314,12 +313,9 @@ public class MainClass {
 	}
 	
 	private void wordFound(String word, Integer gapKey) {
-		//buffers the word length
-		int length = word.length();
-		
 		//adds word to sortedWords, removes word from wordsFromLetters, flags gap for deletion
 		sortedWords.put(gapKey, word);
-		wordsFromLetters.get(length).remove(word);
+		wordsFromLetters.get(word.length()).remove(word);
 		gapsToDelete.add(gapKey);
 	}
 	
@@ -331,7 +327,7 @@ public class MainClass {
 		String[] splitStr = str.split("");
 		
 		//iterates through characters, if it detects any other character than an underscore,
-		// it saves that to the HashMap
+		//it saves that to the HashMap
 		for (int i = 0; i < splitStr.length; i++) {
 			if (! splitStr[i].equals("_")) {
 				detectedLetters.put(i, splitStr[i]);
@@ -348,16 +344,15 @@ public class MainClass {
 		//iterates through every detected word (there are no gaps present anymore!)
 		for (String word : wordsAndGaps) {
 			
-			//saves the length of the word in local variable
-			int length = word.length();
-			
 			//if the ArrayList isn't big enough, it's made to the required size
-			while (wordsFromLetters.size() <= length) {
+			while (wordsFromLetters.size() <= word.length()) {
 				wordsFromLetters.add(wordsFromLetters.size(), new ArrayList<>());
 			}
 			
-			//adds the word to the list at the appropriate place
-			wordsFromLetters.get(length).add(word);
+			//adds the word to the list at the appropriate place.
+			//this is an ArrayList<ArrayList<String>>, so I'm getting the right List for the length of the word
+			//and add the word to that list.
+			wordsFromLetters.get(word.length()).add(word);
 		}
 	}
 	

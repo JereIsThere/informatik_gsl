@@ -29,7 +29,7 @@ public class MainClass {
 	private Pattern criteriaForWord = Pattern.compile("[\\wüöäÜÄÖ]+");
 	
 	// a backup file if the FileChooser is closed and the mainFile is null
-	private String pathToBackupFile = "res/backups/backup.txt";
+	private String pathToBackupFile = "backups/backup.txt";
 	
 	//list of solved gaps that need to be deleted
 	private List<Integer> gapsToDelete = new ArrayList<>();
@@ -38,7 +38,7 @@ public class MainClass {
 	private StringBuilder outputText = new StringBuilder();
 	
 	private int sortWordsRecourseCount = 0;
-	private int sortWordsRecourseCountMax = 10000;
+	private int sortWordsRecourseCountMax = 1000;
 	//----------------------------------------------main--------------------------------------------------------------//
 	
 	public static void main(String[] args) {
@@ -58,13 +58,13 @@ public class MainClass {
 		
 		panel.setLayout(new MigLayout("", "[]20[]", "[][]"));
 		
-		JTextArea sourceTextArea = new JTextArea(1, 30);
+		JTextArea sourceTextArea = new JTextArea(1, 1);
 		sourceTextArea.setLineWrap(true);
 		sourceTextArea.setWrapStyleWord(true);
 		
 		JButton browseButton = new JButton("Select source file!");
 		
-		JTextArea outputTextArea = new JTextArea(1, 30);
+		JTextArea outputTextArea = new JTextArea(1, 1);
 		outputTextArea.setLineWrap(true);
 		outputTextArea.setWrapStyleWord(true);
 		JLabel outputInfoLabel = new JLabel("Output text:");
@@ -115,7 +115,6 @@ public class MainClass {
 	
 	private void fillInWords() {
 		try {
-			
 			BufferedReader reader;
 			
 			reader = initReader();
@@ -303,12 +302,17 @@ public class MainClass {
 		//as long as there are gaps left to solve, this method will recursively start,
 		//until all gaps are solved
 		int sizeOfGaps = gaps.keySet().size();
-		while (sizeOfGaps > 0 && sortWordsRecourseCount < sortWordsRecourseCountMax) {
+		if (sizeOfGaps > 0 && sortWordsRecourseCount < sortWordsRecourseCountMax) {
 			sortWordsRecourseCount++;
 			
 			sortWords();
 			
 			sizeOfGaps = gaps.keySet().size();
+		}
+		if (sortWordsRecourseCount >= sortWordsRecourseCountMax) {
+			JOptionPane.showMessageDialog(null, "No solution could be found!", "Error!", JOptionPane.ERROR_MESSAGE);
+			sortWordsRecourseCount--;
+			return;
 		}
 	}
 	

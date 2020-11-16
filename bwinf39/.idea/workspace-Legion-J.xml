@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="WordSort" />
-    </artifacts-to-build>
-  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -25,18 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0edbaf6-112d-4949-aa58-f94cf2db3c91" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/WordSort.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/miglayout_4_0_swing1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace-Legion-J.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bwinf39.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bwinf39.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/samples/custom_sample.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/samples/die_verwandlung.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/samples/faust.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/samples/identicalTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/SampleCreationClass.kt" beforeDir="false" afterPath="$PROJECT_DIR$/code/de.jeremias_groehl.wordsort/SampleCreationClass.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,12 +39,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
-  </component>
   <component name="ProjectId" id="1hDkyVrC9KRraeSqAAtKcegrHIN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -72,31 +52,29 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1605520625548" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/miglayout-4.0-swing.jar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\fuuma\OneDrive\Desktop\informatik_gsl\bwinf39\res\samples" />
-      <recent name="C:\Users\fuuma\OneDrive\Desktop\informatik_gsl\bwinf39" />
-      <recent name="C:\Users\fuuma\OneDrive\Desktop\informatik_gsl\bwinf39\code\de.jeremias_groehl.wordsort" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\fuuma\OneDrive\Desktop\informatik_gsl\bwinf39\code\de.jeremias_groehl.wordsort" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fuuma\OneDrive\Desktop\informatik_gsl\bwinf39" />
+      <recent name="C:\Users\fuuma\OneDrive\Desktop\informatik_gsl\bwinf39\code\de.jeremias_groehl.wordsort" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.MainClass">
+  <component name="RunManager" selected="Kotlin.SampleCreationClass">
     <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainClass" />
       <module name="bwinf39" />
@@ -104,13 +82,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -130,15 +110,12 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainClass" />
         <item itemvalue="Kotlin.SampleCreationClass" />
+        <item itemvalue="Application.MainClass" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c0edbaf6-112d-4949-aa58-f94cf2db3c91" name="Default Changelist" comment="" />
@@ -149,9 +126,7 @@
       <workItem from="1604958623441" duration="217000" />
       <workItem from="1605041253493" duration="175000" />
       <workItem from="1605290203675" duration="7982000" />
-      <workItem from="1605453866429" duration="12775000" />
-      <workItem from="1605517914889" duration="1857000" />
-      <workItem from="1605537911118" duration="8869000" />
+      <workItem from="1605453866429" duration="13604000" />
     </task>
     <task id="LOCAL-00001" summary="started working on SampleCreationClass.kt, amongst doing everything else">
       <created>1605461741541</created>
@@ -160,21 +135,7 @@
       <option name="project" value="LOCAL" />
       <updated>1605461741541</updated>
     </task>
-    <task id="LOCAL-00002" summary="finished SampleCreationClass.kt, now trying to merge">
-      <created>1605532932414</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1605532932414</updated>
-    </task>
-    <task id="LOCAL-00003" summary="updated project structure">
-      <created>1605532997212</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1605532997212</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,99 +151,75 @@
         </entry>
       </map>
     </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="started working on SampleCreationClass.kt, amongst doing everything else" />
-    <MESSAGE value="finished SampleCreationClass.kt, now trying to merge" />
-    <MESSAGE value="updated project structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="started working on SampleCreationClass.kt, amongst doing everything else" />
   </component>
   <component name="WindowStateProjectService">
     <state x="587" y="222" key="#com.intellij.ide.util.MemberChooser" timestamp="1600186655303">
       <screen x="0" y="0" width="1563" height="1012" />
     </state>
     <state x="587" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1563.1012@0.0.1563.1012" timestamp="1600186655303" />
-    <state x="770" y="342" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1605553496983">
+    <state x="548" y="148" key="CommitChangelistDialog2" timestamp="1605461740733">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="770" y="342" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605553496983" />
-    <state x="548" y="148" key="CommitChangelistDialog2" timestamp="1605532996549">
-      <screen x="0" y="0" width="1920" height="1160" />
-    </state>
-    <state x="548" y="148" key="CommitChangelistDialog2/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605532996549" />
-    <state x="690" y="299" key="FileChooserDialogImpl" timestamp="1605538132292">
+    <state x="548" y="148" key="CommitChangelistDialog2/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605461740733" />
+    <state x="690" y="299" key="FileChooserDialogImpl" timestamp="1605294175787">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="562" y="261" key="FileChooserDialogImpl/0.0.1563.1012@0.0.1563.1012" timestamp="1600181417879" />
-    <state x="690" y="299" key="FileChooserDialogImpl/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605538132292" />
-    <state width="1877" height="321" key="GridCell.Tab.0.bottom" timestamp="1605554126789">
+    <state x="690" y="299" key="FileChooserDialogImpl/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605294175787" />
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom" timestamp="1605471740216">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state width="1520" height="272" key="GridCell.Tab.0.bottom/0.0.1563.1012@0.0.1563.1012" timestamp="1600237953208" />
-    <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605554126789" />
-    <state width="1877" height="321" key="GridCell.Tab.0.center" timestamp="1605554126788">
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605471740216" />
+    <state width="1877" height="321" key="GridCell.Tab.0.center" timestamp="1605471740216">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state width="1520" height="272" key="GridCell.Tab.0.center/0.0.1563.1012@0.0.1563.1012" timestamp="1600237953208" />
-    <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605554126788" />
-    <state width="1877" height="321" key="GridCell.Tab.0.left" timestamp="1605554126788">
+    <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605471740216" />
+    <state width="1877" height="321" key="GridCell.Tab.0.left" timestamp="1605471740216">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state width="1520" height="272" key="GridCell.Tab.0.left/0.0.1563.1012@0.0.1563.1012" timestamp="1600237953208" />
-    <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605554126788" />
-    <state width="1877" height="321" key="GridCell.Tab.0.right" timestamp="1605554126788">
+    <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605471740216" />
+    <state width="1877" height="321" key="GridCell.Tab.0.right" timestamp="1605471740216">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state width="1520" height="272" key="GridCell.Tab.0.right/0.0.1563.1012@0.0.1563.1012" timestamp="1600237953208" />
-    <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605554126788" />
-    <state width="1877" height="396" key="GridCell.Tab.1.bottom" timestamp="1605537751493">
+    <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605471740216" />
+    <state width="1877" height="396" key="GridCell.Tab.1.bottom" timestamp="1605468761256">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="396" key="GridCell.Tab.1.bottom/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605537751493" />
-    <state width="1877" height="396" key="GridCell.Tab.1.center" timestamp="1605537751493">
+    <state width="1877" height="396" key="GridCell.Tab.1.bottom/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605468761256" />
+    <state width="1877" height="396" key="GridCell.Tab.1.center" timestamp="1605468761256">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="396" key="GridCell.Tab.1.center/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605537751493" />
-    <state width="1877" height="396" key="GridCell.Tab.1.left" timestamp="1605537751493">
+    <state width="1877" height="396" key="GridCell.Tab.1.center/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605468761256" />
+    <state width="1877" height="396" key="GridCell.Tab.1.left" timestamp="1605468761256">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="396" key="GridCell.Tab.1.left/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605537751493" />
-    <state width="1877" height="396" key="GridCell.Tab.1.right" timestamp="1605537751493">
+    <state width="1877" height="396" key="GridCell.Tab.1.left/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605468761256" />
+    <state width="1877" height="396" key="GridCell.Tab.1.right" timestamp="1605468761256">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="396" key="GridCell.Tab.1.right/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605537751493" />
+    <state width="1877" height="396" key="GridCell.Tab.1.right/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605468761256" />
     <state x="692" y="282" key="RollbackChangesDialog" timestamp="1605293909350">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="692" y="282" key="RollbackChangesDialog/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605293909350" />
-    <state x="520" y="126" key="SettingsEditor" timestamp="1605553534213">
+    <state x="520" y="126" key="SettingsEditor" timestamp="1605294180615">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="423" y="110" key="SettingsEditor/0.0.1563.1012@0.0.1563.1012" timestamp="1600181710646" />
-    <state x="520" y="126" key="SettingsEditor/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605553534213" />
-    <state x="552" y="312" key="Vcs.Push.Dialog.v2" timestamp="1605532998131">
+    <state x="520" y="126" key="SettingsEditor/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605294180615" />
+    <state x="552" y="312" key="Vcs.Push.Dialog.v2" timestamp="1605461742530">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="552" y="312" key="Vcs.Push.Dialog.v2/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605532998131" />
-    <state x="777" y="493" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605537415966">
-      <screen x="0" y="0" width="1920" height="1160" />
-    </state>
-    <state x="777" y="493" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605537415966" />
+    <state x="552" y="312" key="Vcs.Push.Dialog.v2/0.0.1920.1160/-1920.5.1474.864@0.0.1920.1160" timestamp="1605461742530" />
     <state x="512" y="267" key="extract.method.dialog" timestamp="1600186690727">
       <screen x="0" y="0" width="1563" height="1012" />
     </state>

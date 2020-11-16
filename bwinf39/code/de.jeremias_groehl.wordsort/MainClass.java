@@ -1,59 +1,47 @@
+import net.miginfocom.swing.MigLayout;
+
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
-import javax.swing.filechooser.FileNameExtensionFilter;
-
-import net.miginfocom.swing.MigLayout;
-
 public class MainClass {
-
+	
 	// ------------------------------------------------vars------------------------------------------------------------//
-
+	
 	private InputStream mainFileInputStream;
-
+	
 	private ArrayList<String> wordsAndGaps = new ArrayList<>();
-
+	
 	private JeresHashMap gaps = new JeresHashMap();
-
+	
 	private List<List<String>> wordsFromLetters = new ArrayList<>();
-
+	
 	private JeresHashMap sortedWords = new JeresHashMap();
-
+	
 	private Pattern criteriaForWord = Pattern.compile("[\\wäöüÄÖÜ]+");
-
+	
 	// a backup file if the FileChooser is closed and the mainFile is null
 	private String pathToBackupFile = "/backups/backup.txt";
-
+	
 	// list of solved gaps that need to be deleted
 	private List<Integer> gapsToDelete = new ArrayList<>();
-
+	
 	private StringBuilder sourceText = new StringBuilder();
 	private StringBuilder outputText = new StringBuilder();
-
+	
 	private int sortWordsRecourseCount = 0;
-	private int sortWordsRecourseCountMax = 1000;
+	private int sortWordsRecourseCountMax = 500;
 	// ----------------------------------------------main--------------------------------------------------------------//
-
+	
 	public static void main(String[] args) {
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -61,7 +49,7 @@ public class MainClass {
 				| UnsupportedLookAndFeelException e) {
 			e.printStackTrace();
 		}
-
+		
 		JFrame frame = new JFrame("WordSort");
 		frame.setSize(600, 200);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -69,72 +57,74 @@ public class MainClass {
 		JPanel panel = new JPanel();
 		panel.setBorder(BorderFactory.createEmptyBorder(10, 15, 10, 15));
 		frame.add(panel);
-
+		
 		panel.setLayout(new MigLayout("", "[]20[]", "[][]"));
-
+		
 		JTextArea sourceTextArea = new JTextArea(1, 30);
 		sourceTextArea.setLineWrap(true);
 		sourceTextArea.setWrapStyleWord(true);
-
+		sourceTextArea.setEditable(false);
+		
 		JButton browseButton = new JButton("Select source file!");
-
+		
 		JTextArea outputTextArea = new JTextArea(1, 30);
 		outputTextArea.setLineWrap(true);
 		outputTextArea.setWrapStyleWord(true);
+		outputTextArea.setEditable(false);
 		JLabel outputInfoLabel = new JLabel("Output text:");
-
+		
 		panel.add(browseButton, "left, sg 1");
 		panel.add(sourceTextArea, "right, sg 2, pushx, growx, pushy, growy, wrap");
-
+		
 		panel.add(outputInfoLabel, "left, sg 1");
 		panel.add(outputTextArea, "right, sg 2, pushx, growx, pushy, growy, split");
-
+		
 		frame.setVisible(true);
-
+		
 		List<Image> icons = new ArrayList<>();
-		icons.add(new ImageIcon(MainClass.class.getResource("/desktopIcons/wordSort16.png")).getImage());
-		icons.add(new ImageIcon(MainClass.class.getResource("/desktopIcons/wordSort32.png")).getImage());
-		icons.add(new ImageIcon(MainClass.class.getResource("/desktopIcons/wordSort128.png")).getImage());
-		icons.add(new ImageIcon(MainClass.class.getResource("/desktopIcons/wordSort512.png")).getImage());
+		icons.add(new ImageIcon(MainClass.class.getResource("/desktop_icons/wordSort16.png")).getImage());
+		icons.add(new ImageIcon(MainClass.class.getResource("/desktop_icons/wordSort32.png")).getImage());
+		icons.add(new ImageIcon(MainClass.class.getResource("/desktop_icons/wordSort128.png")).getImage());
+		icons.add(new ImageIcon(MainClass.class.getResource("/desktop_icons/wordSort512.png")).getImage());
 		frame.setIconImages(icons);
-
+		
 		browseButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				MainClass mainClass = new MainClass();
-
+				
 				mainClass.selectFile();
-
+				
 				mainClass.extractWords();
-
+				
 				sourceTextArea.setText(mainClass.sourceText.toString());
-
+				
 				mainClass.extractGapsFromWords();
-
+				
 				mainClass.sortFromLetterCount();
-
+				
 				mainClass.sortWords();
-
+				
 				mainClass.fillInWords();
-
+				
 				outputTextArea.setText(mainClass.outputText.toString());
-
+				
 				frame.setLocationRelativeTo(null);
 				frame.pack();
 			}
 		});
 	}
-
+	
 	// -----------------------------------------------logic------------------------------------------------------------//
-
+	
 	private void fillInWords() {
 		StringBuilder text = new StringBuilder();
-
+		
 		String nextLine = sourceText.toString();
 		String nextLineBuffer = "";
-
+		
 		Matcher word = criteriaForWord.matcher(nextLine);
-
+		
 		int matcherEndBuffer = 0;
 		int wordIndex = 0;
 		while (word.find()) {
@@ -147,46 +137,44 @@ public class MainClass {
 			} else {
 				break;
 			}
-
+			
 			String wordAddendum = nextLine.substring(matcherEndBuffer, word.start());
 			matcherEndBuffer = word.end();
-
+			
 			text.append(wordAddendum).append(wordToPrint);
 		}
-
+		
 		if (nextLine.contains("_")) {
 			nextLineBuffer = nextLine;
 		}
-
+		
 		/* nextLine = reader.readLine(); */
-
+		
 		int endPosition = nextLineBuffer.length();
 		String lastPunctuation = nextLineBuffer.substring(matcherEndBuffer, endPosition);
-
+		
 		text.append(lastPunctuation);
-
+		
 		outputText = text;
 	}
-
+	
 	private BufferedReader initReader() throws FileNotFoundException {
 		BufferedReader reader;
-
+		
 		// checks if the mainFile the reader is trying to read == null, if it is then
 		// use a backup file
-		if (mainFileInputStream != null) {
-			reader = new BufferedReader(new InputStreamReader(mainFileInputStream));
-		} else {
+		if (mainFileInputStream == null) {
 			// shows error dialog
 			String message = "No file selected!";
 			JOptionPane.showMessageDialog(null, message, "Error!", JOptionPane.ERROR_MESSAGE);
-
+			
 			// uses backup file
 			mainFileInputStream = MainClass.class.getResourceAsStream(pathToBackupFile);
-			reader = new BufferedReader(new InputStreamReader(mainFileInputStream));
 		}
+		reader = new BufferedReader(new InputStreamReader(mainFileInputStream, StandardCharsets.UTF_8));
 		return reader;
 	}
-
+	
 	private void sortWords() {
 		gapsToDelete = new ArrayList<>();
 		
@@ -314,7 +302,7 @@ public class MainClass {
 			return;
 		}
 	}
-
+	
 	private void wordFound(String word, Integer gapKey) {
 		//adds word to sortedWords, removes word from wordsFromLetters, flags gap for deletion
 		sortedWords.put(gapKey, word);
@@ -406,11 +394,11 @@ public class MainClass {
 		}
 		
 	}
-
+	
 	private void selectFile() {
 		// instantiates local buffer for new main file
 		File file;
-
+		
 		// set LookAndFeel of UIManager to the system-wide default
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -418,13 +406,13 @@ public class MainClass {
 				| UnsupportedLookAndFeelException e) {
 			e.printStackTrace();
 		}
-
+		
 		// instantiates a JFileChooser with a filter for text files and opens it
 		JFileChooser fileChooser = new JFileChooser();
 		FileNameExtensionFilter filter = new FileNameExtensionFilter("text files", "txt");
 		fileChooser.setFileFilter(filter);
 		fileChooser.showOpenDialog(null);
-
+		
 		// sets the value of the local buffer file to the selected file and updates
 		// mainFile
 		file = fileChooser.getSelectedFile();

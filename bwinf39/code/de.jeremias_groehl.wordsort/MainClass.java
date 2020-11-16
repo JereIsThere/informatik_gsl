@@ -1,15 +1,9 @@
-package de.jeremias_groehl.wordsort;
-
-import java.awt.Image;
+import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -195,104 +189,98 @@ public class MainClass {
 
 	private void sortWords() {
 		gapsToDelete = new ArrayList<>();
-
-		// iterates through all gaps and tries to solve them
+		
+		//iterates through all gaps and tries to solve them
 		for (Integer gapKey : gaps.keySet()) {
-
-			// gathers information about gap: String value, length and what letters
+			
+			//gathers information about gap: String value, length and what letters
 			// are contained in it at which position
 			String gap = gaps.get(gapKey);
 			int length = gap.length();
 			HashMap<Integer, String> gapLetters = detectLetters(gap);
-
-			// creates list of possible words that fit the length of the gap
+			
+			//creates list of possible words that fit the length of the gap
 			List<String> possibleWords = wordsFromLetters.get(length);
-
-			// if there are no letters in the gap:
+			
+			//if there are no letters in the gap:
 			if (gapLetters.keySet().size() == 0) {
-
-				// and the options for a possible word are just one, add the first option to the
-				// list of sorted words
+				
+				// and the options for a possible word are just one, add the first option to the list of sorted words
 				if (possibleWords.size() == 1) {
 					String word = possibleWords.get(0);
 					wordFound(word, gapKey);
-
-					// and there is more than one possible word, this is unsolvable and remains to
-					// be sorted
+					
+					//and there is more than one possible word, this is unsolvable and remains to be sorted
 				} else {
 					sortedWords.put(gapKey, gap);
 				}
-
+				
 			}
-			// if there are letters in the gap:
+			//if there are letters in the gap:
 			else {
-
-				// creates list for words that match the letters and the letterCount of the gap
+				
+				//creates list for words that match the letters and the letterCount of the gap
 				List<String> fittingWords = new ArrayList<>();
-
-				// iterates through every word that has the required number of letters
+				
+				//iterates through every word that has the required number of letters
 				possibleWords.forEach(word -> {
-					// detects all letters in the current possible word
+					//detects all letters in the current possible word
 					HashMap<Integer, String> wordLetters = detectLetters(word);
-
-					// sets up boolean for the case that all of the letters match
+					
+					//sets up boolean for the case that all of the letters match
 					boolean allMatch = true;
-					// iterates through every letter in the gap
+					//iterates through every letter in the gap
 					for (Integer gapLettersKey : gapLetters.keySet()) {
-						// buffers the letter of the current possible word and the gap
+						//buffers the letter of the current possible word and the gap
 						String wordLetter = wordLetters.get(gapLettersKey);
 						String gapLetter = gapLetters.get(gapLettersKey);
-
-						// checks if the current letter of the word is identical with the equivalent
-						// letter
-						// of the gap, if not then it sets allMatch to false and breaks
-						if (!wordLetter.equals(gapLetter)) {
+						
+						//checks if the current letter of the word is identical with the equivalent letter
+						//of the gap, if not then it sets allMatch to false and breaks
+						if (! wordLetter.equals(gapLetter)) {
 							allMatch = false;
 							break;
 						}
 					}
-
-					// checks if all the information on letters matches, and if yes it adds it to
-					// the
+					
+					//checks if all the information on letters matches, and if yes it adds it to the
 					// list of fitting words
 					if (allMatch) {
 						fittingWords.add(word);
 					}
 				});
-
-				// if there is only one fitting word, this handles the adding to sortedWords,
-				// flags the
+				
+				//if there is only one fitting word, this handles the adding to sortedWords, flags the
 				// gap for deletion and removes word from wordsFromLetters
 				if (fittingWords.size() == 1) {
 					String word = fittingWords.get(0);
 					wordFound(word, gapKey);
-
+					
 				} else {
-					// if there is more than one fitting word, it compares the fitting words, to
+					//if there is more than one fitting word, it compares the fitting words, to
 					// see if they are identical
 					boolean areIdentical = false;
-					// compares every word with every word
+					//compares every word with every word
 					for (int i = 0; i < fittingWords.size(); i++) {
 						for (int j = i + 1; j < fittingWords.size(); j++) {
 							String word1 = fittingWords.get(i);
 							String word2 = fittingWords.get(j);
-
-							// if one word is different than the other, it sets areIdentical to false
-							// and breaks
-							if (!word1.equals(word2)) {
+							
+							//if one word is different than the other, it sets areIdentical to false
+							//and breaks
+							if (! word1.equals(word2)) {
 								areIdentical = false;
 								break;
 							} else {
 								areIdentical = true;
 							}
 						}
-						// breaks as soon as it finds two different words
-						if (!areIdentical)
+						//breaks as soon as it finds two different words
+						if (! areIdentical)
 							break;
 					}
-
-					// if all the words are identical, it doesn't matter which word is chosen, so
-					// the first one will do
+					
+					//if all the words are identical, it doesn't matter which word is chosen, so the first one will do
 					if (areIdentical) {
 						String word = fittingWords.get(0);
 						wordFound(word, gapKey);
@@ -300,120 +288,123 @@ public class MainClass {
 						sortedWords.put(gapKey, gap);
 					}
 				}
-
+				
+				
 			}
 		}
-
-		// deletes all the solved gaps that were flagged for deletion
+		
+		//deletes all the solved gaps that were flagged for deletion
 		for (int deleteKey : gapsToDelete) {
 			gaps.remove(deleteKey);
 		}
-
-		// as long as there are gaps left to solve, this method will recursively start,
-		// until all gaps are solved
+		
+		//as long as there are gaps left to solve, this method will recursively start,
+		//until all gaps are solved
 		int sizeOfGaps = gaps.keySet().size();
-		while (sizeOfGaps > 0 && sortWordsRecourseCount < sortWordsRecourseCountMax) {
+		if (sizeOfGaps > 0 && sortWordsRecourseCount < sortWordsRecourseCountMax) {
 			sortWordsRecourseCount++;
-
+			
 			sortWords();
-
+			
 			sizeOfGaps = gaps.keySet().size();
+		}
+		if (sortWordsRecourseCount >= sortWordsRecourseCountMax) {
+			JOptionPane.showMessageDialog(null, "No solution could be found!", "Error!", JOptionPane.ERROR_MESSAGE);
+			sortWordsRecourseCount--;
+			return;
 		}
 	}
 
 	private void wordFound(String word, Integer gapKey) {
-		// adds word to sortedWords, removes word from wordsFromLetters, flags gap for
-		// deletion
+		//adds word to sortedWords, removes word from wordsFromLetters, flags gap for deletion
 		sortedWords.put(gapKey, word);
 		wordsFromLetters.get(word.length()).remove(word);
 		gapsToDelete.add(gapKey);
 	}
-
+	
 	private HashMap<Integer, String> detectLetters(String str) {
-		// creates local buffer HashMap for return value
+		//creates local buffer HashMap for return value
 		HashMap<Integer, String> detectedLetters = new HashMap<>();
-
-		// splits input String into characters
+		
+		//splits input String into characters
 		String[] splitStr = str.split("");
-
-		// iterates through characters, if it detects any other character than an
-		// underscore,
-		// it saves that to the HashMap
+		
+		//iterates through characters, if it detects any other character than an underscore,
+		//it saves that to the HashMap
 		for (int i = 0; i < splitStr.length; i++) {
-			if (!splitStr[i].equals("_")) {
+			if (! splitStr[i].equals("_")) {
 				detectedLetters.put(i, splitStr[i]);
 			}
 		}
-
-		// returns local buffer of HashMap
-		// Example: str = __i_e__
-		// detectedLetters = [3=i, 5=e]
+		
+		//returns local buffer of HashMap
+		//Example: str = __i_e__
+		//detectedLetters = [3=i, 5=e]
 		return detectedLetters;
 	}
-
+	
 	public void sortFromLetterCount() {
-		// iterates through every detected word (there are no gaps present anymore!)
+		//iterates through every detected word (there are no gaps present anymore!)
 		for (String word : wordsAndGaps) {
-
-			// if the ArrayList isn't big enough, it's made to the required size
+			
+			//if the ArrayList isn't big enough, it's made to the required size
 			while (wordsFromLetters.size() <= word.length()) {
 				wordsFromLetters.add(wordsFromLetters.size(), new ArrayList<>());
 			}
-
-			// adds the word to the list at the appropriate place.
-			// this is an ArrayList<ArrayList<String>>, so I'm getting the right List for
-			// the length of the word
-			// and add the word to that list.
+			
+			//adds the word to the list at the appropriate place.
+			//this is an ArrayList<ArrayList<String>>, so I'm getting the right List for the length of the word
+			//and add the word to that list.
 			wordsFromLetters.get(word.length()).add(word);
 		}
 	}
-
+	
 	private void extractGapsFromWords() {
-		// iterates through all words and gaps collected
+		//iterates through all words and gaps collected
 		for (int i = 0; i < wordsAndGaps.size(); i++) {
 			String word = wordsAndGaps.get(i);
-
-			// adds every detected gap to list of gaps, then deletes gap from wordsAndGaps
+			
+			//adds every detected gap to list of gaps, then deletes gap from wordsAndGaps
 			if (word.contains("_")) {
 				gaps.add(word);
 				wordsAndGaps.remove(i);
 				i--;
 			} else {
-				// if there is no gap detected anymore, the method returns
+				//if there is no gap detected anymore, the method returns
 				return;
 			}
 		}
 	}
-
+	
 	private void extractWords() {
 		try {
-			// creates new BufferedReader
+			//creates new BufferedReader
 			BufferedReader reader;
 			reader = initReader();
-
-			// iterates through the file line by line
+			
+			//iterates through the file line by line
 			String nextLine = "";
 			while ((nextLine = reader.readLine()) != null) {
-
-				// creates a matcher for the pattern which defines what a word is
+				
+				//creates a matcher for the pattern which defines what a word is
 				Matcher word = criteriaForWord.matcher(nextLine);
-
-				// if the line contains an underscore, add that line to the source text
+				
+				//if the line contains an underscore, add that line to the source text
 				if (nextLine.contains("_")) {
 					sourceText.append(nextLine);
 				}
-
-				// while there is another word, it adds it to the list of words and gaps
+				
+				//while there is another word, it adds it to the list of words and gaps
 				while (word.find()) {
 					String word_str = nextLine.substring(word.start(), word.end());
 					wordsAndGaps.add(word_str);
 				}
 			}
-
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		
 	}
 
 	private void selectFile() {
